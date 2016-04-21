@@ -20,14 +20,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AND2.cpp" />
+    <ClCompile Include="AND3.cpp" />
+    <ClCompile Include="AND4.cpp" />
     <ClCompile Include="gate.cpp" />
     <ClCompile Include="INVERT.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AND2.h" />
+    <ClInclude Include="AND3.h" />
+    <ClInclude Include="AND4.h" />
     <ClInclude Include="gate.h" />
     <ClInclude Include="INVERT.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{04C266C4-E9DC-452C-9076-227E47D90C7A}</ProjectGuid>

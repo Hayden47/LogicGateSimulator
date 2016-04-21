@@ -4,7 +4,10 @@
 
 
 	AND2::AND2() {
-		 AND2::input[0] = input[1] = 2;
+
+		for (int inp : input) {
+			inp = 2;				// sets each input value to 2
+		}
 	}
 
 
@@ -12,19 +15,17 @@
 
 	int AND2::evaluate() {
 
-		if (input[0] == 0 || input[1] == 0) {
-
-			return 0;
-
-		}else if (input[0]==1 && input[1] == 1) {
-
-			return 1;
-
-		}else {
-
-			return 2;
-
+		for (int inp : input) {		// if any inputs are 0 it will return 0
+			if (inp == 0)
+				return 0;
 		}
+
+		for (int inp : input) {		//if no inputs are zero, but any of them are 2 it will return 2
+			if (inp == 2)
+				return 2;
+		}
+
+		return 1;					//if no inputs are 0 and no inputs are 2 it will return 1
 
 
 	}
@@ -41,6 +42,11 @@
 		outputPointerField = x;
 	}
 
+	void AND2::setPresentOutput(int value) {
+		presentOutput = value;
+	}
+
+
 	gate* AND2::getOutputPointer() {
 		return outputPointer;
 	}
@@ -48,6 +54,12 @@
 	int AND2::getOutputPointerField() {
 		return outputPointerField;
 	}
+
+	int AND2::getPresentOutput() {
+		return presentOutput;
+	}
+
+
 
 
 
