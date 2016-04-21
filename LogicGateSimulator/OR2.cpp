@@ -1,26 +1,25 @@
 #include"OR2.h"
 
 OR2::OR2() {
-	OR2::input[0] = input[1] = 2;
+	for (int inp : input) {
+		inp = 2;				// sets each input value to 2
+	}
+	presentOutput = 2;
 }
 
 int OR2::evaluate() {
-
-	if (input[0] == input[1]) {
-
-		return 0;
-
+	
+	for (int inp : input){
+		if (inp == 1)
+			return 1;
 	}
-	else if (input[0] == 1 || input[1] == 1) {
-
-		return 1;
-
+	
+	for (int inp : input){
+		if (inp == 2)
+			return 2;
 	}
-	else {
-
-		return 2;
-
-	}
+	
+	return 0;
 }
 
 void OR2::setInput(int inputNum, int value) {
