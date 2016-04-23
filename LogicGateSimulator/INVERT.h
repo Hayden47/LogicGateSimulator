@@ -16,9 +16,11 @@ public:
 	void INVERT::setInput(int, int);
 	void INVERT::setOutputPointer(gate*);
 	void INVERT::setOutputPointerField(int);
+	void INVERT::setPresentOutput(int);
 
 	gate* INVERT::getOutputPointer();
 	int INVERT::getOutputPointerField();
+	int INVERT::getPresentOutput();
 
 
 

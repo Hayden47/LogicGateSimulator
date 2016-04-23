@@ -13,6 +13,7 @@ public:
 	int AND4::evaluate();
 
 	void AND4::setInput(int, int);
+	void AND4::setInputPointer(int, gate *g);
 
 	void AND4::setOutputPointer(gate*);
 	gate* AND4::getOutputPointer();

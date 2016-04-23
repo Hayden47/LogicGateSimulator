@@ -5,15 +5,20 @@
 
 	AND2::AND2() {
 
-		for (int inp : input) {
+		for (int &inp : input) {
 			inp = 2;				// sets each input value to 2
 		}
+		presentOutput = 2;
 	}
 
 
 
 
 	int AND2::evaluate() {
+
+		for (int k = 0; k < 2; k++) {
+			input[k] = inputPointer[k]->getPresentOutput;
+		}
 
 		for (int inp : input) {		// if any inputs are 0 it will return 0
 			if (inp == 0)
@@ -32,6 +37,9 @@
 
 	void AND2::setInput(int inputNum, int value) {
 		input[inputNum] = value;
+	}
+	void AND2::setInputPointer(int inputNum, gate *g) {
+		inputPointer[inputNum] = g;
 	}
 
 	void AND2::setOutputPointer(gate* g) {

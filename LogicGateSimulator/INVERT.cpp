@@ -38,12 +38,19 @@
 		outputPointerField = x;
 	}
 
+	void INVERT::setPresentOutput(int value) {
+		presentOutput = value;
+	}
+
 	gate* INVERT::getOutputPointer() {
 		return outputPointer;
 	}
 
 	int INVERT::getOutputPointerField() {
 		return outputPointerField;
+	}
+	int INVERT::getPresentOutput() {
+		return presentOutput;
 	}
 
 

@@ -1,5 +1,5 @@
 #pragma once
-#include"gate.h"
+#include"AND2.h"
 
 class AND3 : public gate {
 
@@ -9,11 +9,13 @@ private:
 	int inputPointerField;
 
 public:
+
 	AND3::AND3();
 
-	int AND3::evaluate();
+	virtual int AND3::evaluate();
 
 	void AND3::setInput(int, int);
+	void AND3::setInputPointer(int, gate *g);
 
 	void AND3::setOutputPointer(gate*);
 	gate* AND3::getOutputPointer();

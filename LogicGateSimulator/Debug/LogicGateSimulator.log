@@ -1,8 +1,4 @@
 ﻿  Main.cpp
-c:\users\hayde_000\documents\visual studio 2015\projects\logicgatesimulator\logicgatesimulator\main.cpp(14): error C2065: 'vector': undeclared identifier
-c:\users\hayde_000\documents\visual studio 2015\projects\logicgatesimulator\logicgatesimulator\main.cpp(14): error C2146: syntax error: missing ';' before identifier 'c'
-c:\users\hayde_000\documents\visual studio 2015\projects\logicgatesimulator\logicgatesimulator\main.cpp(14): error C2065: 'c': undeclared identifier
   AND4.cpp
-  AND3.cpp
-  AND2.cpp
   Generating Code...
+  LogicGateSimulator.vcxproj -> C:\Users\hayde_000\Documents\Visual Studio 2015\Projects\LogicGateSimulator\Debug\LogicGateSimulator.exe

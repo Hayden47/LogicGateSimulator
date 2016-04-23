@@ -4,6 +4,7 @@
 class AND2 : public gate {
 
 
+
 private: 
 	int input[2];
 	gate *inputPointer[2];
@@ -13,9 +14,10 @@ public:
 	
 	AND2::AND2();
 
-	int AND2::evaluate();
+	virtual int AND2::evaluate();
 
 	void AND2::setInput(int,int);
+	void AND2::setInputPointer(int,gate *g);
 
 	void AND2::setOutputPointer(gate*);
 	gate* AND2::getOutputPointer();
@@ -26,10 +28,5 @@ public:
 	void AND2::setPresentOutput(int);
 	int AND2::getPresentOutput();
 	
-	
-	
-
-
-
-
 };
+

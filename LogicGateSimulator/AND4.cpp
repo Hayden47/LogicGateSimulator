@@ -2,7 +2,7 @@
 
 AND4::AND4() {
 
-	for (int inp : input) {
+	for (int &inp : input) {
 		inp = 2;				// sets each input value to 2
 	}
 
@@ -27,6 +27,9 @@ int AND4::evaluate() {
 
 void AND4::setInput(int inputNum, int value) {
 	input[inputNum] = value;
+}
+void AND4::setInputPointer(int inputNum, gate *g) {
+	inputPointer[inputNum] = g;
 }
 
 void AND4::setOutputPointer(gate* g) {

@@ -1,12 +1,16 @@
 #include"AND3.h"
 
+
 AND3::AND3() {
 
-	for (int inp : input) {
+	for (int &inp : input) {
 		inp = 2;				// sets each input value to 2
 	}
-
+	presentOutput = 2;
 }
+
+
+
 
 int AND3::evaluate() {
 
@@ -16,16 +20,20 @@ int AND3::evaluate() {
 	}
 
 	for (int inp : input) {		//if no inputs are zero, but any of them are 2 it will return 2
+		if (inp == 2)
 			return 2;
 	}
 
 	return 1;					//if no inputs are 0 and no inputs are 2 it will return 1
 
-}
 
+}
 
 void AND3::setInput(int inputNum, int value) {
 	input[inputNum] = value;
+}
+void AND3::setInputPointer(int inputNum, gate *g) {
+	inputPointer[inputNum] = g;
 }
 
 void AND3::setOutputPointer(gate* g) {
@@ -52,3 +60,6 @@ int AND3::getOutputPointerField() {
 int AND3::getPresentOutput() {
 	return presentOutput;
 }
+
+
+

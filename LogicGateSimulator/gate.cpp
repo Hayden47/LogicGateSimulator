@@ -19,3 +19,15 @@ int gate::getOutputPointerField() {
 void gate::setInput(int x, int y) {
 
 }
+
+void gate::setDelay(int d) {
+	delay = d;
+}
+
+int gate::getDelay() {
+	return delay;
+}
+
+int gate::getPresentOutput() {
+	return presentOutput;
+}

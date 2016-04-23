@@ -23,6 +23,7 @@
     <ClCompile Include="AND3.cpp" />
     <ClCompile Include="AND4.cpp" />
     <ClCompile Include="gate.cpp" />
+    <ClCompile Include="INPUT.cpp" />
     <ClCompile Include="INVERT.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
@@ -31,6 +32,7 @@
     <ClInclude Include="AND3.h" />
     <ClInclude Include="AND4.h" />
     <ClInclude Include="gate.h" />
+    <ClInclude Include="INPUT.h" />
     <ClInclude Include="INVERT.h" />
   </ItemGroup>
   <ItemGroup>
