@@ -6,8 +6,8 @@ class OR2 : public gate {
 
 
 private:
-	int input[2];
-	gate *inputPointer[2];
+	virtual int input[2];
+	virtual gate *inputPointer[2];
 	int inputPointerField;
 
 public:
