@@ -1,16 +1,15 @@
 #pragma once
-#include"OR2.h"
-
-
-class OR3 : public OR2 {
-
-
-private:
-	int input[3];
-	gate *inputPointer[3];
+#include"gate.h"
+#include"OR.h"
+class OR3 : public OR<3> {
 
 public:
+	OR3() {
+		for (int inp : input) {
+			inp = 2;				// sets each input value to 2
+		}
+		presentOutput = 2;
 
-	OR3();
+	}
 
 };
