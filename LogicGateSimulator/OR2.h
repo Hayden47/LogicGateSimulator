@@ -1,30 +1,15 @@
 #pragma once
 #include"gate.h"
-
-
-class OR2 : public gate {
-
-
-private:
-	virtual int input[2];
-	virtual gate *inputPointer[2];
-	int inputPointerField;
+#include"OR.h"
+class OR2 : public OR<2> {
 
 public:
+	OR2() {
+		for (int inp : input) {
+			inp = 2;				// sets each input value to 2
+		}
+		presentOutput = 2;
 
-	OR2();
-
-	int evaluate();
-
-	void setInput(int, int);
-	void setOutputPointer(gate*);
-	void setOutputPointerField(int);
-
-	gate* getOutputPointer();
-	int getOutputPointerField();
-
-
-
-
+	}
 
 };
