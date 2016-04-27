@@ -6,9 +6,10 @@ class XOR : public gate {
 private:
 	gate *inputPointer[Size];
 	int inputPointerField;
-	int counter = 0;
-	int input;
-	x = 1;
+	int counter;
+	int gate_input;
+	int x;
+	int z;
 public:
 	int input[Size];
 	XOR() {
@@ -17,22 +18,31 @@ public:
 		}
 		presentOutput = 2;
 	}
-	int do_evaluation(int inp, int i){
-		if (inp == 2) || (input[i] == 2)
-				return 2;
-		if (inp != input[i]) && ((inp == 1) || (input[i] == 1))
-			return 1;
+	int do_evaluation(int inp, int i) {
+		if ((input[i] == 2) || (inp == 2))
+			return 2;
+		if (inp != input[i]) {
+			if ((input[i] == 1) || (inp== 1))
+				return 1;
+		}
 		return 0;
 	}
 
 	int evaluate() {
-		if (input.size > 2)
-			input = input[0]
-			counter = input.size
+		if (Size > 2) {
+			gate_input = input[0];
+			counter = Size;
+			x = 1;
 			while (counter >= 2){
-				input = do_evaluation(input, x);
-			x += 1
+				gate_input = do_evaluation(gate_input, x);
+				x += 1;
+				counter -= 1;
+				if (counter == 1)
+					return gate_input;	
 			}
+		}
+		else
+			return do_evaluation(0, 1);
 	}
 
 	void setInput(int inputNum, int value) {
