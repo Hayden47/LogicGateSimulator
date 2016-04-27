@@ -9,7 +9,6 @@ private:
 	int counter;
 	int gate_input;
 	int x;
-	int z;
 public:
 	int input[Size];
 	XOR() {
