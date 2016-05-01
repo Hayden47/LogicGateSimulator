@@ -10,8 +10,12 @@ private:
 	int gate_input;
 	int x;
 	int z;
-public:
+
+protected:
 	int input[Size];
+
+public:
+
 	NOR() {
 		for (int inp : input) {
 			inp = 2;				// sets each input value to 2
@@ -39,9 +43,9 @@ public:
 				gate_input = do_evaluation(gate_input, x);
 				x += 1;
 				counter -= 1;
-				if (counter == 1)
-					return gate_input;
+					
 			}
+			return gate_input;
 		}
 		else
 			return do_evaluation(0, 1);
@@ -59,11 +63,39 @@ public:
 		outputPointerField = x;
 	}
 
+	void setInputPointer(int n, gate* g) {
+		inputPointer[n] = g;
+	}
+
+	void setInputPointers(std::vector<gate*> & list) {
+		for (int k = 0; k < Size; k++) {
+			inputPointer[k] = list[input[k]];
+			input[k] = 0;
+		}
+	}
+
 	gate* getOutputPointer() {
 		return outputPointer;
 	}
 	int getOutputPointerField() {
 		return outputPointerField;
+	}
+
+	bool inputHasChanged() {
+
+		bool hasChanged = false;
+		int n = 0;
+		for (int inp : input) {
+			if (inp != inputPointer[n]->getPresentOutput())
+			{
+				hasChanged = true;
+				inp = inputPointer[n]->getPresentOutput();
+				n++;
+			}
+
+		}
+		return hasChanged;
+
 	}
 
 }; 

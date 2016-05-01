@@ -11,10 +11,12 @@ private:
 	int gate_input;
 	int x;
 
-public:
+protected:
 	int input[Size];
+public:
+	
 	NAND() {
-		for (int inp : input) {
+		for (int &inp : input) {
 			inp = 2;				// sets each input value to 2
 		}
 		presentOutput = 2;
@@ -61,8 +63,19 @@ public:
 		outputPointer = g;
 	}
 
+	void setInputPointer(int n, gate* g) {
+		inputPointer[n] = g;
+	}
+
 	void setOutputPointerField(int x) {
 		outputPointerField = x;
+	}
+
+	void setInputPointers(std::vector<gate*> & list) {
+		for (int k = 0; k < Size; k++) {
+			inputPointer[k] = list[input[k]];
+			input[k] = 0;
+		}
 	}
 
 	gate* getOutputPointer() {
@@ -70,5 +83,17 @@ public:
 	}
 	int getOutputPointerField() {
 		return outputPointerField;
+	}
+
+	bool inputHasChanged() {
+		bool hasChanged = false;
+		for (int k = 0; k < Size; k++) {
+			if (input[k] != inputPointer[k]->getPresentOutput()) {
+				hasChanged = true;
+				input[k] = inputPointer[k]->getPresentOutput();
+			}
+		}
+		return hasChanged;
+
 	}
 };

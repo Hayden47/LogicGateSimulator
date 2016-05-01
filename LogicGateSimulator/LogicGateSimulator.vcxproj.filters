@@ -18,22 +18,22 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AND2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="INVERT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="gate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AND3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AND4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="INPUT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="partition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="timingWheel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,9 +56,72 @@
     <ClInclude Include="INPUT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AND.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OR2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OR3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OR4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="partition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="timingWheel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NOR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NOR2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NOR3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NOR4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XOR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XOR2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XOR4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XOR3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NAND.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NAND2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NAND3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NAND4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="data.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

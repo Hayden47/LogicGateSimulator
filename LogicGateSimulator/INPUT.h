@@ -20,4 +20,8 @@ public:
 	int INPUT::getPresentOutput();
 
 
+	bool INPUT::inputHasChanged();
+	bool INPUT::isInput();
+
+
 };

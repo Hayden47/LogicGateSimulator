@@ -1,13 +1,9 @@
 #include"INVERT.h"
 
 
-
-
-
-
-
 	INVERT::INVERT() {
-		input[0] = input[1] = 2;
+		presentOutput = 2;
+		input[0] = 2;
 	}
 
 
@@ -42,6 +38,19 @@
 		presentOutput = value;
 	}
 
+	void INVERT::setInputPointer(int n, gate* g) {
+		inputPointer[n] = g;
+	}
+
+	void INVERT::setInputPointers(std::vector<gate*> &list) {
+		inputPointer[0] = list[input[0]];
+		input[0] = 2;
+	}
+
+	int INVERT::getPresentOutput() {
+		return presentOutput;
+	}
+
 	gate* INVERT::getOutputPointer() {
 		return outputPointer;
 	}
@@ -49,8 +58,14 @@
 	int INVERT::getOutputPointerField() {
 		return outputPointerField;
 	}
-	int INVERT::getPresentOutput() {
-		return presentOutput;
+
+	bool INVERT::inputHasChanged() {
+		bool hasChanged = false;
+		if (input[0] != inputPointer[0]->getPresentOutput()) {
+			hasChanged = true;
+			input[0] = inputPointer[0]->getPresentOutput();
+		}
+		return hasChanged;
 	}
 
 

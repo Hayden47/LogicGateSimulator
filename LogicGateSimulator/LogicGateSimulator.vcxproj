@@ -19,23 +19,44 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AND2.cpp" />
-    <ClCompile Include="AND3.cpp" />
-    <ClCompile Include="AND4.cpp" />
     <ClCompile Include="gate.cpp" />
     <ClCompile Include="INPUT.cpp" />
+    <ClCompile Include="InputReader.cpp" />
     <ClCompile Include="INVERT.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="partition.cpp" />
+    <ClCompile Include="timingWheel.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AND.h" />
     <ClInclude Include="AND2.h" />
     <ClInclude Include="AND3.h" />
     <ClInclude Include="AND4.h" />
+    <ClInclude Include="InputReader.h" />
+    <ClInclude Include="NAND.h" />
+    <ClInclude Include="NAND2.h" />
+    <ClInclude Include="NAND3.h" />
+    <ClInclude Include="NAND4.h" />
+    <ClInclude Include="NOR.h" />
+    <ClInclude Include="NOR2.h" />
+    <ClInclude Include="NOR3.h" />
+    <ClInclude Include="NOR4.h" />
+    <ClInclude Include="partition.h" />
     <ClInclude Include="gate.h" />
     <ClInclude Include="INPUT.h" />
     <ClInclude Include="INVERT.h" />
+    <ClInclude Include="OR.h" />
+    <ClInclude Include="OR2.h" />
+    <ClInclude Include="OR3.h" />
+    <ClInclude Include="OR4.h" />
+    <ClInclude Include="timingWheel.h" />
+    <ClInclude Include="XOR.h" />
+    <ClInclude Include="XOR2.h" />
+    <ClInclude Include="XOR3.h" />
+    <ClInclude Include="XOR4.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="data.txt" />
     <Text Include="input.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

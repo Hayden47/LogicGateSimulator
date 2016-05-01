@@ -17,10 +17,13 @@ public:
 	void INVERT::setOutputPointer(gate*);
 	void INVERT::setOutputPointerField(int);
 	void INVERT::setPresentOutput(int);
+	void INVERT::setInputPointer(int,gate*);
+	void INVERT::setInputPointers(std::vector<gate*>&);
 
 	gate* INVERT::getOutputPointer();
 	int INVERT::getOutputPointerField();
 	int INVERT::getPresentOutput();
+	bool INVERT::inputHasChanged();
 
 
 
