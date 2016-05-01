@@ -33,6 +33,9 @@
     <ClCompile Include="timingWheel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BUFFER.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="InputReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -114,6 +117,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="NAND4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BUFFER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BUFFER.cpp" />
     <ClCompile Include="gate.cpp" />
     <ClCompile Include="INPUT.cpp" />
     <ClCompile Include="InputReader.cpp" />
@@ -32,6 +33,7 @@
     <ClInclude Include="AND2.h" />
     <ClInclude Include="AND3.h" />
     <ClInclude Include="AND4.h" />
+    <ClInclude Include="BUFFER.h" />
     <ClInclude Include="InputReader.h" />
     <ClInclude Include="NAND.h" />
     <ClInclude Include="NAND2.h" />

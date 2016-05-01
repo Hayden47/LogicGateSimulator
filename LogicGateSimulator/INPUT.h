@@ -11,12 +11,9 @@ public:
 	int INPUT::evaluate();
 
 	void INPUT::setInput(int, int);
-	void INPUT::setOutputPointer(gate*);
-	void INPUT::setOutputPointerField(int);
 	void INPUT::setPresentOutput(int);
 
-	gate* INPUT::getOutputPointer();
-	int INPUT::getOutputPointerField();
+
 	int INPUT::getPresentOutput();
 
 

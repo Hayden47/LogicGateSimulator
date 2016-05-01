@@ -37,13 +37,6 @@ public:
 		input[inputNum] = value;
 	}
 
-	void setOutputPointer(gate* g) {
-		outputPointer = g;
-	}
-
-	void setOutputPointerField(int x) {
-		outputPointerField = x;
-	}
 
 	void setInputPointer(int n, gate* g) {
 		inputPointer[n] = g;
@@ -52,15 +45,8 @@ public:
 	void setInputPointers(std::vector<gate*> & list) {
 		for (int k = 0; k < Size; k++) {
 			inputPointer[k] = list[input[k]];
-			input[k] = 0;
+			input[k] = 2;
 		}
-	}
-
-	gate* getOutputPointer() {
-		return outputPointer;
-	}
-	int getOutputPointerField() {
-		return outputPointerField;
 	}
 
 	//checks to see if any of the inputs have changed ang if so it updates the input array

@@ -61,9 +61,15 @@ void timingWheel::schedule(std::vector<gate*> &list) {
 	for (gate* g : list) {
 		bob++;
 		if (g->inputHasChanged()) {
+
+			if (!g->isInput() && g->getDelay() < 1) {
+				g->setOutput(g->evaluate());
+			}else{
 				partition *p = new partition(g);
 				p->setNextPartition(firstPartition);
 				firstPartition = p;
+			}
+				
 			
 			//std::cout<< bob << ", " << p->getNewValue()<< std::endl;
 			//std::cout << "adding new partition" << std::endl;

@@ -17,7 +17,7 @@ protected:
 public:
 
 	NOR() {
-		for (int inp : input) {
+		for (int &inp : input) {
 			inp = 2;				// sets each input value to 2
 		}
 		presentOutput = 2;
@@ -55,13 +55,6 @@ public:
 		input[inputNum] = value;
 	}
 
-	void setOutputPointer(gate* g) {
-		outputPointer = g;
-	}
-
-	void setOutputPointerField(int x) {
-		outputPointerField = x;
-	}
 
 	void setInputPointer(int n, gate* g) {
 		inputPointer[n] = g;
@@ -70,16 +63,10 @@ public:
 	void setInputPointers(std::vector<gate*> & list) {
 		for (int k = 0; k < Size; k++) {
 			inputPointer[k] = list[input[k]];
-			input[k] = 0;
+			input[k] = 2;
 		}
 	}
 
-	gate* getOutputPointer() {
-		return outputPointer;
-	}
-	int getOutputPointerField() {
-		return outputPointerField;
-	}
 
 	bool inputHasChanged() {
 
