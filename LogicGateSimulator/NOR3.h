@@ -1,6 +1,8 @@
 #pragma once
 #include"gate.h"
 #include"NOR.h"
+
+// Class for NOR3 gate. Inherits from NOR gate.
 class NOR3 : public NOR<3> {
 
 public:
