@@ -1,6 +1,7 @@
 #pragma once
 #include"gate.h"
 #include"AND.h"
+
 class AND3 : public AND<3> {
 
 public:
