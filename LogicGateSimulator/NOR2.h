@@ -2,7 +2,7 @@
 #include"gate.h"
 #include"NOR.h"
 
-// Class for NOR2 class . Inherits from gate class.
+// Class for NOR2 class . Inherits from NOR class.
 class NOR2 : public NOR<2> {
 
 public:
