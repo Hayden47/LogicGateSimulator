@@ -1,6 +1,7 @@
 #pragma once
 #include"gate.h"
 
+// Class for input gate. Inherits from gate class.
 class INPUT : public gate{
 
 private:
