@@ -1,6 +1,8 @@
 #pragma once
 #include"gate.h"
 #include"OR.h"
+
+// Class for OR2 gate. Inherits from OR gate.
 class OR2 : public OR<2> {
 
 public:

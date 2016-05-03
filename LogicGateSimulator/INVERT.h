@@ -1,6 +1,7 @@
 #pragma once
 #include "gate.h"
 
+// Class for Invert gate. Inherits from gate class.
 class INVERT : public gate {
 
 private:

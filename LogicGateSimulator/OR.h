@@ -1,10 +1,14 @@
 #pragma once
 #include"gate.h"
 template <size_t Size>
+
+// Base class for OR gates. Inherits from the gate class.
 class OR : public gate {
 
 private:
-	gate *inputPointer[Size];
+	gate *inputPointer[Size];				// Size comes from  template. 
+								// Allows for inheritance without worrying
+								// about Size.
 	int inputPointerField;
 
 protected:
@@ -32,16 +36,18 @@ public:
 		}
 		return 0;
 	}
-
+	
+	// Sets input of gate.
 	void setInput(int inputNum, int value) {
 		input[inputNum] = value;
 	}
 
-
+	// Sets input pointer
 	void setInputPointer(int n, gate* g) {
 		inputPointer[n] = g;
 	}
-
+	
+	// Sets input pointers
 	void setInputPointers(std::vector<gate*> & list) {
 		for (int k = 0; k < Size; k++) {
 			inputPointer[k] = list[input[k]];

@@ -1,14 +1,19 @@
 #pragma once
 #include"gate.h"
 template <size_t Size>
+
+// Base class for XOR gates. Inherits from the gate class.
 class XOR : public gate {
 
 private:
-	gate *inputPointer[Size];
+	gate *inputPointer[Size];				// Size comes from  template. 
+								// Allows for inheritance without worrying
+								// about Size.
 	int inputPointerField;
 	int counter;
 	int gate_input;
 	int x;
+	
 protected:
 	int input[Size];
 
@@ -20,6 +25,8 @@ public:
 		}
 		presentOutput = 2;
 	}
+	
+	// Evaluates input
 	int do_evaluation(int inp, int i) {
 		if ((input[i] == 2) || (inp == 2))
 			return 2;
@@ -29,7 +36,10 @@ public:
 		}
 		return 0;
 	}
-
+	
+	/* Checks size to decide how it will evaluate.
+	// Ex: if Size is 3. It evaluates the first two inputs
+	// and then evaluates the result with the third input. */
 	int evaluate() {
 		if (Size > 2) {
 			gate_input = input[0];
@@ -47,16 +57,18 @@ public:
 		else
 			return do_evaluation(0, 1);
 	}
-
+	
+	// Sets input of gate.
 	void setInput(int inputNum, int value) {
 		input[inputNum] = value;
 	}
 
-
+	// Sets input pointer
 	void setInputPointer(int n, gate* g) {
 		inputPointer[n] = g;
 	}
 
+	// Sets input pointers
 	void setInputPointers(std::vector<gate*> & list) {
 		for (int k = 0; k < Size; k++) {
 			inputPointer[k] = list[input[k]];
@@ -64,7 +76,7 @@ public:
 		}
 	}
 
-
+	// Checks for change in inputs and updates array when changes are found.
 	bool inputHasChanged() {
 		bool hasChanged = false;
 		for (int k = 0; k < Size; k++) {
