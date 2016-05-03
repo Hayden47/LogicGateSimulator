@@ -2,10 +2,13 @@
 #include"gate.h"
 template <size_t Size>
 
+// Base class for NAND gates. Inherits from the gate class.
 class NAND : public gate {
 
 private:
-	gate *inputPointer[Size];
+	gate *inputPointer[Size];				// Size comes from  template. 
+								// Allows for inheritance without worrying
+								// about Size.
 	int inputPointerField;
 	int counter;
 	int gate_input;
@@ -54,17 +57,18 @@ public:
 		else
 			return do_evaluation(0, 1);
 	}
-
+	
+	// Sets input of gate.
 	void setInput(int inputNum, int value) {
 		input[inputNum] = value;
 	}
 
-
+	// Sets input pointer
 	void setInputPointer(int n, gate* g) {
 		inputPointer[n] = g;
 	}
 
-
+	// Sets input pointers
 	void setInputPointers(std::vector<gate*> & list) {
 		for (int k = 0; k < Size; k++) {
 			inputPointer[k] = list[input[k]];
@@ -72,7 +76,7 @@ public:
 		}
 	}
 
-
+	// Checks for change in inputs and updates array when changes are found.
 	bool inputHasChanged() {
 		bool hasChanged = false;
 		for (int k = 0; k < Size; k++) {
