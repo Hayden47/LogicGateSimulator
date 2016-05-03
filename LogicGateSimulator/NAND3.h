@@ -1,7 +1,7 @@
 #pragma once
 #include"gate.h"
 #include"NAND.h"
-// Class for NAND3 class . Inherits from gate class.
+// Class for NAND3 class . Inherits from NAND class.
 class NAND3 : public NAND<3> {
 
 public:
