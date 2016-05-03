@@ -1,6 +1,8 @@
 #pragma once
 #include"gate.h"
 #include"AND.h"
+
+// Class for AND2 gate. Inherites from AND class.
 class AND2 : public AND<2> {
 
 public:
