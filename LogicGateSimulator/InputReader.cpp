@@ -30,7 +30,7 @@ void readNetListFile(std::vector<gate*> &list) {
 	do{
 
 		if (!correctInput) {
-			std::cout << "There is a problem with the netlist file.\n";
+			std::cout << "There is a problem with the netlist file.\n"; //If there is a problem with the in put this will display.
 		}
 		correctInput = true;
 		std::ifstream inp;
@@ -40,7 +40,7 @@ void readNetListFile(std::vector<gate*> &list) {
 		inp.open(fileName);
 
 		if (!inp) {
-			correctInput = false;
+			correctInput = false; // If the input file does not exist this will set correctInput to false.
 		}
 		int n = 0;
 		if(correctInput){
@@ -149,7 +149,7 @@ void readNetListFile(std::vector<gate*> &list) {
 				list[k] = x;
 			}
 			else {
-				correctInput = false;
+				correctInput = false; // If the input is an unknown type this will set correctinput to false.
 			}
 
 			if(correctInput){

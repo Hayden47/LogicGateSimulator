@@ -12,11 +12,11 @@ void printResults(std::vector<gate*>&,int);
 
 void main() {
 
-	std::vector<gate*> list;
-	readNetListFile(list);
+	std::vector<gate*> list; 
+	readNetListFile(list);  // Reads the netlist file and creates the logic gates.
 	std::string fileName;
 
-	bool fileExists = true;
+	bool fileExists = true; //Used for input validation.
 
 	std::cout << "enter data file name(include file extension): ";
 	std::cin >> fileName;
@@ -27,7 +27,7 @@ void main() {
 	else
 		fileExists = false;
 
-	while (!fileExists) {
+	while (!fileExists) {   //Continue asking for file name untill correct input is recieved.
 		if (!fileExists) {
 			std::cout << "Specified file does not exist.\n";
 		}
@@ -79,6 +79,8 @@ void main() {
 }
 
 
+
+// Prints the results in a tabular format
 void printResults(std::vector<gate*> &list,int time) {
 	std::cout<< "|" << std::setw(3) <<std::left<<time << "|";
 	for (gate* g : list) {
