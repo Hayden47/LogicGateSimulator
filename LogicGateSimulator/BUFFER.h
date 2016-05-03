@@ -1,5 +1,7 @@
 #pragma once
 #include"gate.h"
+
+// Class for BUFFER gate. Inherits from gate class.
 class BUFFER : public gate {
 
 private:
