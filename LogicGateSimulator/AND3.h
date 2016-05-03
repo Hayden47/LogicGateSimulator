@@ -2,6 +2,8 @@
 #include"gate.h"
 #include"AND.h"
 
+// Class for AND3 gate. Inherites from AND class.
+
 class AND3 : public AND<3> {
 
 public:
