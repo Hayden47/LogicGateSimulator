@@ -1,6 +1,8 @@
 #pragma once
 #include"gate.h"
 #include"XOR.h"
+
+// Class for XOR3 gate. Inherits from XOR gate.
 class XOR3 : public XOR<3> {
 
 public:
