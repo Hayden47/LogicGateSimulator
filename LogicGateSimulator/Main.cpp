@@ -18,6 +18,7 @@ void main() {
 
 	bool fileExists = true; //Used for input validation.
 
+	//Get input data file
 	std::cout << "enter data file name(include file extension): ";
 	std::cin >> fileName;
 	std::ifstream inputFile;
@@ -42,21 +43,18 @@ void main() {
 	} 
 	
 
-
+	//Get simulation time.
 	int endTime;
 	std::cout << "enter simulation end time: ";
 	std::cin >> endTime;
-
+	//Create timing wheel
 	timingWheel tw;
 
 	int simulationTime = 0;
 
 
-
-	std::cout << std::endl << std::endl<<"Time|";
-
-	
-
+	//Initial output
+	std::cout << std::endl << std::endl << "Time|";
 	for (int k = 0; k < list.size(); k++) {
 		std::cout << k << "  |";
 	}
@@ -65,7 +63,7 @@ void main() {
 		std::cout << "----";
 	}
 	std::cout << "----|" << std::endl;
-
+	//Main body loop.
 	while (simulationTime <= endTime) {
 		readInput(inputFile,list);
 		tw.update();

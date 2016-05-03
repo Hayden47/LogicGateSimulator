@@ -1,4 +1,11 @@
-﻿  Main.cpp
-c:\users\hayde_000\documents\visual studio 2015\projects\logicgatesimulator\logicgatesimulator\main.cpp(60): warning C4018: '<': signed/unsigned mismatch
-c:\users\hayde_000\documents\visual studio 2015\projects\logicgatesimulator\logicgatesimulator\main.cpp(64): warning C4018: '<': signed/unsigned mismatch
+﻿  timingWheel.cpp
+  Main.cpp
+c:\users\hayde_000\documents\visual studio 2015\projects\logicgatesimulator\logicgatesimulator\main.cpp(58): warning C4018: '<': signed/unsigned mismatch
+c:\users\hayde_000\documents\visual studio 2015\projects\logicgatesimulator\logicgatesimulator\main.cpp(62): warning C4018: '<': signed/unsigned mismatch
+  InputReader.cpp
+  Generating Code...
+c:\users\hayde_000\documents\visual studio 2015\projects\logicgatesimulator\logicgatesimulator\nand.h(56): warning C4715: 'NAND<3>::evaluate': not all control paths return a value
+c:\users\hayde_000\documents\visual studio 2015\projects\logicgatesimulator\logicgatesimulator\nand.h(56): warning C4715: 'NAND<4>::evaluate': not all control paths return a value
+  Skipping... (no relevant changes detected)
+  partition.cpp
   LogicGateSimulator.vcxproj -> C:\Users\hayde_000\Documents\Visual Studio 2015\Projects\LogicGateSimulator\Debug\LogicGateSimulator.exe

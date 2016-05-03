@@ -1,7 +1,6 @@
 #include"timingWheel.h"
 #include<iostream>
 timingWheel::timingWheel() {
-	numPartitions = 0;
 }
 
 void timingWheel::update() {
@@ -12,13 +11,11 @@ void timingWheel::update() {
 
 			if (currentPartition->getRemainingDelay() < 1) {
 				currentPartition->getGatePointer()->setOutput(currentPartition->getNewValue());
-				//std::cout << "changing out put" << std::endl;
 				clearTimeSlot();
 
 			}
 			else {
 					currentPartition->updateDelay();
-				//	std::cout << "updating delay" << std::endl;
 					moveToNextPartition = true;
 					
 			}
@@ -35,21 +32,18 @@ void timingWheel::update() {
 
 
 void timingWheel::clearTimeSlot() {
-	if(previousPartition){
+	if(previousPartition){ //If the current partition is not the first partition
 		previousPartition->setNextPartition(currentPartition->getNextPartition());
 		delete currentPartition;
 		currentPartition = previousPartition;
 		moveToNextPartition = true;
-		//std::cout << "Clearing time slot(not first)" << std::endl;
 	}
-	else {
+	else {//If the current patition is the first partition
 		firstPartition = firstPartition->getNextPartition();
 		delete currentPartition;
 		currentPartition = firstPartition;
 		moveToNextPartition = false;
-		//std::cout << "Clearing time slot(first)" << std::endl;
 	}
-	numPartitions--;
 	
 	
 
@@ -57,9 +51,7 @@ void timingWheel::clearTimeSlot() {
 
 
 void timingWheel::schedule(std::vector<gate*> &list) {
-	int bob = 0;
 	for (gate* g : list) {
-		bob++;
 		if (g->inputHasChanged()) {
 
 			if (!g->isInput() && g->getDelay() < 1) {
@@ -69,13 +61,8 @@ void timingWheel::schedule(std::vector<gate*> &list) {
 				p->setNextPartition(firstPartition);
 				firstPartition = p;
 			}
-				
-			
-			//std::cout<< bob << ", " << p->getNewValue()<< std::endl;
-			//std::cout << "adding new partition" << std::endl;
 		}
 	}
-	//std::cout <<std::endl;
 	
 
 }
