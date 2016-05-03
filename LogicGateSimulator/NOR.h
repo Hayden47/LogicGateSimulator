@@ -26,6 +26,8 @@ public:
 		}
 		presentOutput = 2;
 	}
+	
+	// Does evaluations
 	int do_evaluation(int inp, int i) {
 		if ((input[i] == 0) && (inp == 0))
 			return 1;
@@ -37,7 +39,10 @@ public:
 
 		return 0;
 	}
-
+	
+	/* Checks size to decide how it will evaluate.
+	// Ex: if Size is 3. It evaluates the first two inputs
+	// and then evaluates the result with the third input. */
 	int evaluate() {
 		if (Size > 2) {
 			gate_input = input[0];
