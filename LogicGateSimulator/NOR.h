@@ -26,38 +26,18 @@ public:
 		}
 		presentOutput = 2;
 	}
-	
-	// Does evaluations
-	int do_evaluation(int inp, int i) {
-		if ((input[i] == 0) && (inp == 0))
-			return 1;
 
-		if ((input[i] == 2) || (inp == 2))
-			return 2;
-
-		
-
-		return 0;
-	}
-	
-	/* Checks size to decide how it will evaluate.
-	// Ex: if Size is 3. It evaluates the first two inputs
-	// and then evaluates the result with the third input. */
+	//if any of the inputs are 1 this will return 0, else if any are 2 it will return 2, else it will return 1
 	int evaluate() {
-		if (Size > 2) {
-			gate_input = input[0];
-			counter = Size;
-			x = 1;
-			while (counter >= 2) {
-				gate_input = do_evaluation(gate_input, x);
-				x += 1;
-				counter -= 1;
-					
-			}
-			return gate_input;
+		for (int k = 0; k < Size; k++) {
+			if (input[k] == 1)
+				return 0;
 		}
-		else
-			return do_evaluation(0, 1);
+		for (int k = 0; k < Size; k++) {
+			if (input[k] == 2)
+				return 2;
+		}
+		return 1;
 	}
 
 	// Sets input of gate.
@@ -83,13 +63,13 @@ public:
 
 		bool hasChanged = false;
 		int n = 0;
-		for (int inp : input) {
+		for (int &inp : input) {
 			if (inp != inputPointer[n]->getPresentOutput())
 			{
 				hasChanged = true;
 				inp = inputPointer[n]->getPresentOutput();
-				n++;
 			}
+			n++;
 
 		}
 		return hasChanged;

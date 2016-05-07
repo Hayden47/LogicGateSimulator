@@ -25,41 +25,17 @@ public:
 		presentOutput = 2;
 	}
 	
-	// Does input evaluation.
-	int do_evaluation(int inp, int i) {
-		if (inp == input[i]) {
-			if ((input[i] == 1) && (inp == 1))
-				return 0;
-			return 1;			
-		}
-		else {
-			if ((input[i] == 2) || (inp == 2))
-				if ((input[i] == 0) || (inp == 0)) {
-					return 1;
-				return 0;
-			}
-		}
-		return 1;
-	}
-	
-	/* Checks size to decide how it will evaluate.
-	// Ex: if Size is 3. It evaluates the first two inputs
-	// and then evaluates the result with the third input. */
+	//if any of the inputs are 0 this will return 1, else if any are 2 it will return 2, else it will return 0
 	int evaluate() {
-		if (Size > 2) {
-			gate_input = input[0];
-			counter = Size;
-			x = 1;
-			while (counter >= 2) {
-				gate_input = do_evaluation(gate_input, x);
-				x += 1;
-				counter -= 1;
-				if (counter == 1)
-					return gate_input;
-			}
+		for (int k = 0; k < Size; k++) {
+			if (input[k] == 0)
+				return 1;
 		}
-		else
-			return do_evaluation(0, 1);
+		for (int k = 0; k < Size; k++) {
+			if (input[k] == 2)
+				return 2;
+		}
+		return 0;
 	}
 	
 	// Sets input of gate.

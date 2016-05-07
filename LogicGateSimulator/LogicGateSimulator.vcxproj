@@ -58,6 +58,8 @@
     <ClInclude Include="XOR4.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="2input.txt" />
+    <Text Include="2inputdata.txt" />
     <Text Include="data.txt" />
     <Text Include="input.txt" />
   </ItemGroup>
